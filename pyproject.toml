@@ -1,16 +1,15 @@
+
 [tool.poetry]
-name = "dapr-helpers"
+name = "dapr_helpers"
 version = "0.1.0"
 description = ""
-authors = ["肖告 <moon791017@gmail.com>"]
+authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-setuptools = "^59.4.0"
 httpx = "^0.21.1"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
