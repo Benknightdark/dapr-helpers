@@ -4,7 +4,9 @@ from dapr_httpx.error_log_helper import format_error_msg
 
 
 class SecretsApi(DaprApi):
-
+    '''
+    Secrets API
+    '''
     async def get_bulk_secrets(self, secret_store_name):
         '''
         批次取得秘密資料
