@@ -4,6 +4,11 @@ name = "dapr_httpx"
 version = "0.2.0"
 description = "✨dapr ➕ ✨httpx is awesome"
 authors = ["Ben <moon791017@gmail.com>"]
+readme = "./README.md"
+homepage = "https://github.com/Benknightdark/dapr-helpers"
+repository = "https://github.com/Benknightdark/dapr-helpers"
+documentation = "https://github.com/Benknightdark/dapr-helpers"
+keywords = ["dapr","httpx"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
