@@ -55,13 +55,13 @@ class InvokeApi(DaprApi):
         finally:
             await self.close_client()
 
-    async def delete(self, method_name, payload):
+    async def delete(self, method_name):
         '''
         發送delete request
         '''
         try:
             self.start_client()
-            req = await self.client.delete(f'{self.invoke_url}/{method_name}', json=payload)
+            req = await self.client.delete(f'{self.invoke_url}/{method_name}')
             res = req.json()
             return res
         except Exception as e:

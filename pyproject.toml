@@ -1,7 +1,7 @@
 
 [tool.poetry]
 name = "dapr_httpx"
-version = "0.1.9"
+version = "0.2.0"
 description = "✨dapr ➕ ✨httpx is awesome"
 authors = ["Ben <moon791017@gmail.com>"]
 
