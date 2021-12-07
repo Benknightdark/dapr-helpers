@@ -2,7 +2,17 @@ import httpx
 
 
 class DaprApi:
+
     def __init__(self, end_point_name, timeout, retries, dapr_port, dapr_api_version):
+        """[summary]
+
+        Args:
+            end_point_name ([type]): [description]
+            timeout ([type]): [description]
+            retries ([type]): [description]
+            dapr_port ([type]): [description]
+            dapr_api_version ([type]): [description]
+        """        
         self.timeout = timeout
         self.retries = retries
         self.end_point_name = end_point_name
