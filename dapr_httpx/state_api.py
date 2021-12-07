@@ -23,13 +23,14 @@ class StateApi(DaprApi):
         finally:
             await self.close_client()
 
-    async def save(self, key):
+    async def save(self, key,payload):
         '''
         儲存某一個state key的資料
         '''
         try:
             self.start_client()
-            req = await self.client.post(f'{self.state_url}/{key}')
+            print(f'{self.state_url}/{key}')
+            req = await self.client.post(f'{self.state_url}/{key}',json=payload)
             res = req.json()
             return res
         except Exception as e:
