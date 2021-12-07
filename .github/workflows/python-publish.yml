@@ -25,11 +25,8 @@ jobs:
           poetry-version: ${{ matrix.poetry-version }}
       - name: build package
         run: poetry build
-      - name: build package
-        run: |
-             export PYPI_USERNAME=__token__
-             export PYPI_PASSWORD= ${{ secrets.PYPI_API_TOKEN }}
-             poetry publish --username $PYPI_USERNAME --password $PYPI_PASSWORD
+      - name: publish package
+        run: poetry publish --username __token__ --password ${{ secrets.PYPI_API_TOKEN }}
       # - name: Publish package to PyPI
       #   uses: pypa/gh-action-pypi-publish@release/v1
       #   with:
