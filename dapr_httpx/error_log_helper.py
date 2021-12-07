@@ -1,6 +1,5 @@
 import sys
 import traceback
-import logging
 def format_error_msg(e):
     '''
     格式化錯誤訊息

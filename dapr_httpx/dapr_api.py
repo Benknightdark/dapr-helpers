@@ -2,9 +2,10 @@ import httpx
 
 
 class DaprApi:
-    def __init__(self, timeout=30, retries=500, dapr_port='3500', dapr_api_version='v1.0'):
+    def __init__(self, end_point_name, timeout, retries, dapr_port, dapr_api_version):
         self.timeout = timeout
         self.retries = retries
+        self.end_point_name = end_point_name
         self.api_url = f'http://localhost:{dapr_port}/{dapr_api_version}'
         self.client = None
 

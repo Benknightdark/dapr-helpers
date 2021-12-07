@@ -7,9 +7,11 @@ class InvokeApi(DaprApi):
     '''
     Service invocation API
     '''
-    def __init__(self,service_name, timeout=30, retries=500, dapr_port='3500', dapr_api_version='v1.0'):
-        DaprApi.__init__(self,timeout,retries,dapr_port,dapr_api_version)
-        self.invoke_url = f'{self.api_url}/invoke/{service_name}/method'
+
+    def __init__(self, end_point_name, timeout=30, retries=500, dapr_port='3500', dapr_api_version='v1.0'):
+        DaprApi.__init__(self, end_point_name, timeout,
+                         retries, dapr_port, dapr_api_version)
+        self.invoke_url = f'{self.api_url}/invoke/{self.end_point_name}/method'
 
     async def get(self, method_name):
         '''
